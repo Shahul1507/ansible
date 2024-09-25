@@ -1,0 +1,33 @@
+- name: create user
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: check user exist or not
+    ansible.builtin.command: id expense
+    register: USER #here USER is a variable that gets output from above command
+    ignore_errors: True
+
+  - name: print the user information
+    ansible.builtin.debug:
+      msg: "user info: {{ USER }}"
+
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0
+  
+  # - name: check the user exist or not
+  #   ansible.builtin.command: id expense 
+  #   register: USER1
+
+  # - name: print the user information
+  #   ansible.builtin.debug:
+  #     msg: "user info: {{ USER1 }}"
+
+  # - name: remove user
+  #   ansible.builtin.command: userdel expense
+  #   when: USER1.rc == 0  
+
+#module to create user
+  #  - name: create expense user
+  #   ansible.builtin.user:
+  #     name: expense

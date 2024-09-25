@@ -1,0 +1,12 @@
+- name: print the names
+  hosts: localhost
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+      msg: "Hello {{ item }}"  # {{ item }} reserved key in ansible to read the variable in loop
+    loop:
+    - Ramesh
+    - Suresh
+    - Raju
+    - Raheem
+    - Robert  

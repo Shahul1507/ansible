@@ -1,0 +1,32 @@
+
+192.168.1.1  # ungrouped
+192.168.1.2  # ungrouped
+192.168.1.3  # ungrouped
+
+[web]         # group
+172.31.45.75  
+
+[local] #used with in server
+localhost
+
+[web:vars]
+DURATION="10HRS"
+TRAINER="Sivakumar Reddy"
+
+[backend]     # group
+192.168.1.4
+192.168.1.5
+192.168.1.6
+
+[mysql]
+192.168.1.7
+192.168.1.8
+192.168.1.9
+
+[servers:children]  # group of groups
+web
+backend
+
+[all:vars]     # works for all hosts
+ansible_user=ec2-user
+ansible_password=DevOps321
