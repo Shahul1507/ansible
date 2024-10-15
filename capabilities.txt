@@ -1,0 +1,29 @@
+Capabilities:
+  Cloud Security:
+   - IAM
+   - Data Encryption
+   - Network security
+   - Cloud Security Assessment
+  Cost:
+   - Cost Optimisation Strategies
+   - Low Latency and Security
+  Cloud Migration:
+   - Infra Migration
+   - Cloud Strategy
+   - Iaac
+   - Scalability
+  DevSecOps:
+  - CICD
+   - Shiftleft
+   - Containerisation and Orchestration
+   - Change Management
+   - Governance
+   - 12factor implementation
+   - Configuration management
+   - Security Scans
+   - Cloudnative deployment strategies
+   - Performance Optimization
+   - System Architecture
+   - Incident Response Planning
+   - Continuous Improvement 
+  SRE:
